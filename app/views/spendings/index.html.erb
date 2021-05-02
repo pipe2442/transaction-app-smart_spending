@@ -1,0 +1,27 @@
+<section>
+    <div class="user">
+        <h1>Check Your Expenses</h1>
+        <p>
+            In this section you can check and create new expenses in your list with their respective groups.
+        </p>
+    </div>
+    <%= render partial: "form" %>
+    <!-- component -->
+    <% current_user.spendings.each do |spending|%>
+    <% if spending.group.name != 'No group' %>
+    <!-- 1 card -->
+    <div class="card">
+        <div>
+            <h2><%= spending.name%></h2>
+            <h3>Amount:</h3>
+            <h3><%= spending.amount%></h3>
+            <h3>Creation date:</h3>
+            <h3><%= spending.created_at%></h3>
+            <h3>Group:</h2>
+            <h2><%= link_to spending.group.name, group_path(spending.group) %></h2>
+            <%= link_to "Delete", spending, method: :delete, :class => "text-white " %>
+        </div>
+    </div>
+    <% end %>
+    <% end %>
+</section>

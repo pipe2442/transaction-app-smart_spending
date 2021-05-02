@@ -1,0 +1,18 @@
+<section class="bg-softgray py-5">
+    <div class="user">
+        <h1>Check <%= @group.name %> Group</h1>
+        <p>In this section you can check a single group with his transactions.</p>
+    </div>
+    <!-- component -->
+    <% @group.spendings.each do |transaction|%>
+    <!-- 1 card -->
+    <div class="card">
+        <h3><%= transaction.name %></h3>
+        <h3><%= transaction.amount %></h3>
+    </div>
+    <% end %>
+    <div class="card">
+        <h2>The total amount is:</h2>
+        <h3><%= grouptotal(@group) %></h3>
+    </div>
+</section>

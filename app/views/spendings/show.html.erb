@@ -1,0 +1,28 @@
+<section class="py-10">
+  <div class="leading-loose flex justify-center my-10">
+    <div class="bg-softgray p-20 rounded-lg">
+      <%= form_tag sessions_path do %>
+      <p class="text-xl font-semibold mb-10 text-center">Log In</p>
+      <div>
+        <div class="block text-sm text-xl font-semibold text-center">
+          <%= label_tag :email %>
+        </div>
+        <div class="w-full py-1 bg-softgray rounded-lg placeholder-midgray text-midgray text-center">
+          <%= text_field_tag :email, params[:email] %>
+        </div>
+      </div>
+      <div>
+        <div class="block text-sm text-xl font-semibold text-center">
+          <%= label_tag :password%>
+        </div>
+        <div class="w-full py-1 bg-softgray rounded-lg placeholder-midgray text-midgray text-center">
+          <%= password_field_tag :password%>
+        </div>
+      </div>
+      <div class="flex justify-center space-x-2 text-sm my-5 mx-10 p-1 rounded-lg text-center">
+        <%= submit_tag 'Log In', class: 'text-white bg-softgreen hover:bg-green rounded-lg py-2 px-6' %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</section>

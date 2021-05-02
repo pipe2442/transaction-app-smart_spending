@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SpendingsController < ApplicationController
   before_action :authorize
 

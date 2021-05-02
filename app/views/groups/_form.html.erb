@@ -1,0 +1,10 @@
+<div class="user">
+  <div>
+    <%= form_with model: @group do |form| %>
+    <h1>New Group</h1>
+    <div><%= form.label :name %></div>
+    <div> <%= form.text_field :name, :placeholder => "Group Name" %></div>  
+    <div><%= form.submit 'Create Group' %></div>
+    <% end %>
+  </div>
+</div>

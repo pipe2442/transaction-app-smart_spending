@@ -1,0 +1,24 @@
+<section class="bg-softgray pb-3 pt-20">
+    <div class="user">
+        <h1>External Transactions</h1>
+        <p>
+            In this section you can check transactions that doesn't have a defined group.
+        </p>
+    </div>
+    <!-- component -->
+    <% @spendings.each do |spending|%>
+    <% if spending.group.name == 'No group' %>
+    <!-- 1 card -->
+    <div class="card">
+        <div>
+            <h2><%= spending.name%></h2>
+            <h3>Amount:</h3>
+            <h3><%= spending.amount%></h3>
+            <h3>Creation date:</h3>
+            <h3><%= spending.created_at%></h3>
+            <%= link_to "Delete", spending, method: :delete, :class => "text-white " %>
+        </div>
+    </div>
+    <% end %>
+    <% end %>
+</section>
