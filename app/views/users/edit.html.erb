@@ -12,13 +12,11 @@
                 </ul>
             </div>
             <% end %>
-            <p class="text-xl font-semibold mb-10 text-center">Update Profile Pic</p>
-            <div class="">
-                <%= form.label :avatar, :class => "block text-sm text-xl font-semibold text-center" %>
-                <%= form.file_field :avatar, :class => "w-full py-1 bg-softgray rounded-lg placeholder-midgray text-midgray text-center", :placeholder => "avatar" %>
-            </div>
-            <div class="flex justify-center space-x-2 text-sm my-5 mx-10 p-1 rounded-lg text-center">
-                <%= form.submit 'update avatar', :class => 'text-white bg-softgreen hover:bg-green rounded-lg py-1 px-3' %>
+            <div class="user">
+                <h2>Update Profile Pic</h2>
+                <%= form.label :avatar %>
+                <%= form.file_field :avatar, :placeholder => "avatar" %>
+                <%= form.submit 'update avatar' %>
             </div>
             <% end %>
         </div>
