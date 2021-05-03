@@ -7,7 +7,6 @@
     </div>
     <!-- component -->
     <% @spendings.each do |spending|%>
-    <% if spending.group.name == 'No group' %>
     <!-- 1 card -->
     <div class="card">
         <div>
@@ -19,6 +18,5 @@
             <%= link_to "Delete", spending, method: :delete, :class => "text-white " %>
         </div>
     </div>
-    <% end %>
     <% end %>
 </section>
