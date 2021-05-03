@@ -18,10 +18,9 @@ module ApplicationHelper
   def show_externals(external)
     arr = []
     external.first.spendings.each do |spending|
-         arr << spending
-    end 
-    
+      arr << spending
+    end
+
     arr
   end
-
 end

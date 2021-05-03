@@ -11,7 +11,7 @@ class SpendingsController < ApplicationController
     @spendings = []
     @external.first.spendings.each do |spending|
       @spendings << spending
-    end 
+    end
   end
 
   def show
