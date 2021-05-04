@@ -1,6 +1,11 @@
 # Transaction capstone ruby on rails
+# 
+## Smart Spending
+![Hireable](https://cdn.rawgit.com/hiendv/hireable/master/styles/default/yes.svg)
 
 > This repo includes transaction app capstone developed for ruby and rails module.
+
+![screenshot](https://github.com/pipe2442/transaction-app-smart_spending/blob/testing/unit-testing/app/assets/images/mockupdevices.PNG)
 
 ## Built With
 
