@@ -5,8 +5,7 @@
     </div>
     <%= render partial: "form" %>
     <!-- component -->
-    <% current_user.groups.each do |group|%>
-    <% if group.name != 'No group' %>
+    <% current_user.groups.with_group.each do |group|%>
     <!-- 1 card -->
     <div class="card">
         <div>
@@ -16,6 +15,5 @@
             <%= link_to "Delete", group, method: :delete, :class => "text-white " %>
         </div>
     </div>
-    <% end %>
     <% end %>
 </section>
