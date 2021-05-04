@@ -5,11 +5,11 @@
 ## Built With
 
 - Ruby v2.7.3
-- Ruby on Rails v5.2.4
+- Ruby on Rails v6.1.3.1
 
 ## Live Demo
 
-[Click here to check live version](https://smartspending-capstone123.herokuapp.com/)
+[Click here to check live version](https://transactionapp2442.herokuapp.com/)
 
 
 ## Getting Started
@@ -18,8 +18,8 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-ruby 2.7.2
-Rails: >= 5.2.4
+ruby 2.7.3
+Rails: >= 6.1.3.1
 Postgres: >= 9.5
 
 ### Setup
@@ -27,6 +27,7 @@ Postgres: >= 9.5
 Install gems with:
 
 ```
+bundle update
 bundle install
 ```
 
