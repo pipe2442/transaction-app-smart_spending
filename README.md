@@ -10,8 +10,13 @@
 
 ## Built With
 
-- Ruby v2.7.3
-- Ruby on Rails v6.1.3.1
+- [Ruby on Rails v6.1.3.1](http://rubyonrails.org/).
+- [Postgresql](https://www.postgresql.org/).
+- [Postgres](https://www.ruby-lang.org/en/).
+- [rspec](https://rspec.info/).
+- [Git](https://git-scm.com/).
+- [Rubocop](https://github.com/microverseinc/linters-config/tree/master/ruby).
+- [Capybara](https://github.com/teamcapybara/capybara).  
 
 ## Live Demo
 
