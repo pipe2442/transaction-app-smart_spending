@@ -8,8 +8,8 @@ class SpendingsController < ApplicationController
     @groups.includes(:spendings).each do |group|
       group.spendings.each do |spending|
         @spendings << spending
-      end 
-    end 
+      end
+    end
   end
 
   def external
