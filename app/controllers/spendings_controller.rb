@@ -3,13 +3,19 @@ class SpendingsController < ApplicationController
 
   def index
     @spending = Spending.new
-    @spendings = Spending.all.includes(:group)
+    @spendings = []
+    @groups = current_user.groups.with_group
+    @groups.includes(:spendings).each do |group|
+      group.spendings.each do |spending|
+        @spendings << spending
+      end 
+    end 
   end
 
   def external
     @external = current_user.groups.external
     @spendings = []
-    @external.first.spendings.each do |spending|
+    @external.preload(:spendings).first.spendings.each do |spending|
       @spendings << spending
     end
   end
