@@ -13,6 +13,7 @@
 - [Ruby on Rails v6.1.3.1](http://rubyonrails.org/).
 - [Ruby 2.7.3](https://www.ruby-lang.org/en/).
 - [Postgresql](https://www.postgresql.org/).
+- [Bootstrap](https://getbootstrap.com/).
 - [rspec](https://rspec.info/).
 - [Git](https://git-scm.com/).
 - [Rubocop](https://github.com/microverseinc/linters-config/tree/master/ruby).
