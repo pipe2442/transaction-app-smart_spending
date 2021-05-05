@@ -5,7 +5,7 @@
 
 > This repo includes transaction app capstone developed for ruby and rails module.
 
-## ![Video presentation](https://www.loom.com/share/504e249923f94986bdaeeb344f9d7781)
+## [Video presentation](https://www.loom.com/share/504e249923f94986bdaeeb344f9d7781)
 
 ![screenshot](https://github.com/pipe2442/transaction-app-smart_spending/blob/testing/unit-testing/app/assets/images/ruby-on-rails-development.jpg)
 ![screenshot](https://github.com/pipe2442/transaction-app-smart_spending/blob/testing/unit-testing/app/assets/images/mockupdevices.PNG)
