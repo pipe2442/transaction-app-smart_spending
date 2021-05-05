@@ -39,15 +39,15 @@
   box-shadow: rgba(255, 255, 255, 0.1) 0 1px 1px 0 inset, rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
 }
 
-.card {
+.group {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 100px 250px;
+  padding: 30px 70px;
   align-items: center;
-  margin: 100px 350px;
   background-color: #f1f1f1;
   border-radius: 25px;
-  padding: 40px 20px;
   font-family: 'Open Sans', sans-serif;
   box-shadow: rgba(255, 255, 255, 0.1) 0 1px 1px 0 inset, rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
 }

@@ -17,7 +17,7 @@
 
 
     <% if current_user.avatar.attached? %>
-    <%= image_tag current_user.avatar, style: 'height:30%;width:30%;border-radius:100%;' %>
+    <%= image_tag current_user.avatar, style: 'height:150px;width:150px;border-radius:100%;' %>
     <div class="buttonstyle">
       <%= link_to "Update avatar", edit_user_path(current_user), :class => "text-white" %>
     </div>

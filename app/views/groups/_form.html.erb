@@ -2,6 +2,10 @@
   <div>
     <%= form_with model: @group do |form| %>
     <h1>New Group</h1>
+        <div><%= form.label :icon, :class => "block text-sm text-xl font-semibold text-center" %></div>
+    <div>
+      <%= form.file_field :icon, :class => "w-full py-1 bg-softgray rounded-lg placeholder-midgray text-midgray text-center" %>
+    </div>
     <div><%= form.label :name %></div>
     <div> <%= form.text_field :name, :placeholder => "Group Name" %></div>  
     <div><%= form.submit 'Create Group' %></div>

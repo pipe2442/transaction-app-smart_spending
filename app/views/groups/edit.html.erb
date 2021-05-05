@@ -1,0 +1,24 @@
+<section class="bg-softgray py-10">
+    <div class="leading-loose flex justify-center my-10">
+        <div class="bg-white p-20 rounded-lg">
+            <%= form_for @group do |form| %>
+            <% if @group.errors.any? %>
+            <div class="error_messages">
+                <h2>Form is invalid</h2>
+                <ul>
+                    <% @group.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                    <% end %>
+                </ul>
+            </div>
+            <% end %>
+            <div class="user">
+                <h2>Update Icon Pic</h2>
+                <%= form.label :icon %>
+                <%= form.file_field :icon, :placeholder => "avatar" %>
+                <%= form.submit 'update icon' %>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</section>
