@@ -9,16 +9,10 @@
     <!-- 1 card -->
     <div class="group">
         <div>
-            <% if group.icon.attached? %>
-            <%= image_tag group.icon, style: 'height:120px;width:120px;border-radius:50%;' %>
+            <%= show_icon(group) %>
             <div class="buttonstyle">
                 <%= link_to "Update icon", edit_group_path(group), :class => "text-white" %>
             </div>
-            <% else %>
-            <div class="buttonstyle">
-                <%= link_to "Update icon", edit_group_path(group), :class => "text-white" %>
-            </div>
-            <% end %>
         </div>
         <div>
             <h2><%= link_to group.name, group_path(group) %></h2>

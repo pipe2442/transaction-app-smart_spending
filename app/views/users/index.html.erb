@@ -15,18 +15,10 @@
   <% if session[:user_id] != nil %>
   <div class="user">
 
-
-    <% if current_user.avatar.attached? %>
-    <%= image_tag current_user.avatar, style: 'height:150px;width:150px;border-radius:100%;' %>
+    <%= show_avatar(current_user) %>
     <div class="buttonstyle">
       <%= link_to "Update avatar", edit_user_path(current_user), :class => "text-white" %>
     </div>
-
-    <% else %>
-    <div class="buttonstyle">
-      <%= link_to "Upload avatar", edit_user_path(current_user), :class => "text-white" %>
-    </div>
-    <% end %>
 
     <p><%= current_user.name %></p>
     <p><%= current_user.email %></p>

@@ -12,9 +12,7 @@
     <!-- 1 card -->
     <div class="group">
         <div>
-            <% if spending.group.icon.attached? %>
-                <%= image_tag spending.group.icon, style: 'height:120px;width:120px;border-radius:50%;' %>
-            <% end %>
+            <%= show_icon(spending.group) %>
             <h2>Group:</h2>
             <h3><%= link_to spending.group.name, group_path(spending.group) %></h3>    
         </div>
