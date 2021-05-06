@@ -1,15 +1,5 @@
 <section>
   <%= form_for @user do |form| %>
-  <% if @user.errors.any? %>
-  <div class="error_messages">
-    <h2>Form is invalid</h2>
-    <ul>
-      <% @user.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-      <% end %>
-    </ul>
-  </div>
-  <% end %>
   <div class="user">
     <p class="text-xl font-semibold mb-10 text-center">Sign Up</p>
     <div><%= form.label :avatar, :class => "block text-sm text-xl font-semibold text-center" %></div>
@@ -33,6 +23,6 @@
       <%= form.password_field :password_confirmation, :class => "w-full py-1 bg-softgray rounded-lg placeholder-midgray text-midgray text-center", :placeholder => "Confirm Password" %>
     </div>
     <div><%= form.submit 'Register', :class => 'text-white bg-softgreen hover:bg-green rounded-lg py-1 px-3' %></div>
-    <% end %>
   </div>
+  <% end %>
 </section>
