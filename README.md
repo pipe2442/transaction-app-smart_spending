@@ -50,6 +50,7 @@ Setup database with:
 ```
    rails db:create
    rails db:migrate
+   npm install
 ```
 
 ### Github Actions
