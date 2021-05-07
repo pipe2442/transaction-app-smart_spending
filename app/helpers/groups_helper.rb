@@ -25,4 +25,22 @@ module GroupsHelper
     end
     list_item
   end
+
+  def show_group(group)
+    list_item = tag.div do
+      ' '
+    end
+    group.spendings.each do |transaction|
+      list_item +=
+        content_tag(:div, class: 'user') do
+          content_tag(:h1) do
+            transaction.name
+          end +
+            content_tag(:h3) do
+              transaction.amount.to_s
+            end
+        end
+    end
+    list_item
+  end
 end

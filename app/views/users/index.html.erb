@@ -1,6 +1,4 @@
 <section>
-
-
   <div class="box">
     <div class="title">
       <h1>Smart Spending</h1>
@@ -11,26 +9,5 @@
     </div>
     <%= image_tag "spendsmart.png", style: 'height:30%;width:30%;border-radius:100%;' %>
   </div>
-
-  <% if session[:user_id] != nil %>
-  <div class="user">
-
-    <%= show_avatar(current_user) %>
-    <div class="buttonstyle">
-      <%= link_to "Update avatar", edit_user_path(current_user), :class => "text-white" %>
-    </div>
-
-    <p><%= current_user.name %></p>
-    <p><%= current_user.email %></p>
-    <p>You have <%= current_user.spendings.count %> transactions</p>
-    <p>You have <%= current_user.groups.count - 1%> groups</p>
-
-
-    <h3>Total Expenses</h3>
-    <p><%= total_expenses(current_user) %></p>
-
-
-  </div>
-  <% end %>
-
+  <%= show_profile(current_user) %>
 </section>
