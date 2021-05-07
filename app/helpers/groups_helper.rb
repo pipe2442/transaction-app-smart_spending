@@ -18,6 +18,9 @@ module GroupsHelper
             content_tag(:h3) do
               group.created_at
             end +
+            content_tag(:h3) do
+              "Created by: "+group.user.name
+            end +
             content_tag(:button) do
               link_to 'Delete', group, method: :delete
             end
