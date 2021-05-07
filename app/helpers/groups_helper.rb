@@ -9,6 +9,9 @@ module GroupsHelper
           content_tag(:h3) do
             show_icon(group)
           end +
+            content_tag(:h4, class: 'buttonstyle') do
+              link_to 'Update icon', edit_group_path(group)
+            end +
             content_tag(:h1) do
               link_to group.name, group_path(group)
             end +
