@@ -4,22 +4,5 @@
         <p>In this section you can create new groups.</p>
     </div>
     <%= render partial: "form" %>
-    <!-- component -->
-    <% current_user.groups.with_group.each do |group|%>
-    <!-- 1 card -->
-    <div class="group">
-        <div>
-            <%= show_icon(group) %>
-            <div class="buttonstyle">
-                <%= link_to "Update icon", edit_group_path(group), :class => "text-white" %>
-            </div>
-        </div>
-        <div>
-            <h2><%= link_to group.name, group_path(group) %></h2>
-            <h3>Creation date:</h3>
-            <h3><%= group.created_at%></h3>
-            <%= link_to "Delete", group, method: :delete, :class => "text-white " %>
-        </div>
-    </div>
-    <% end %>
+    <%= display_groups(current_user.groups.with_group) %>
 </section>
