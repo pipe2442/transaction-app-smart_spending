@@ -44,6 +44,9 @@ module GroupsHelper
           end +
             content_tag(:h3) do
               transaction.amount.to_s
+            end +
+            content_tag(:h3) do
+              "Created by: #{transaction.user.name}"
             end
         end
     end

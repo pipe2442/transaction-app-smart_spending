@@ -11,8 +11,6 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       Group.create(name: 'No group', user_id: @user.id)
-      Group.create(name: 'Market', user_id: @user.id)
-      Group.create(name: 'Books', user_id: @user.id)
       session[:user_id] = @user.id
       redirect_to root_url, notice: 'Thank you for signing up!'
     else

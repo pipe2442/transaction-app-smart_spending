@@ -6,7 +6,13 @@
     </div>
     <%= show_group(@group) %>
     <div class="group">
-        <h2>The total amount is:</h2>
-        <h3><%= grouptotal(@group) %></h3>
+        <div>
+            <h2>Group Owner:</h2>
+            <h3><%= @group.user.name %></h3>
+        </div>
+        <div>
+            <h2>The total amount is:</h2>
+            <h3><%= grouptotal(@group) %></h3>
+        </div>
     </div>
 </section>

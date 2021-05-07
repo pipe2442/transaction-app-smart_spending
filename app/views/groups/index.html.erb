@@ -1,8 +1,8 @@
 <section>
     <div class="user">
-        <h1>Check Your Groups</h1>
+        <h1>Check Groups</h1>
         <p>In this section you can create new groups.</p>
     </div>
     <%= render partial: "form" %>
-    <%= display_groups(current_user.groups.with_group.sort { |a, b| a.name <=> b.name }) %>
+    <%= display_groups(@groups.with_group.sort { |a, b| a.name <=> b.name }) %>
 </section>
