@@ -7,7 +7,7 @@ class SpendingsController < ApplicationController
     @groups = current_user.groups.with_group
     @groups.includes(:spendings).each do |group|
       group.spendings.each do |spending|
-        @spendings.unshift(spending) 
+        @spendings.unshift(spending)
       end
     end
   end
@@ -16,7 +16,7 @@ class SpendingsController < ApplicationController
     @external = current_user.groups.external
     @spendings = []
     @external.preload(:spendings).first.spendings.each do |spending|
-      @spendings.unshift(spending) 
+      @spendings.unshift(spending)
     end
   end
 
