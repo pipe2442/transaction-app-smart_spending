@@ -1,0 +1,19 @@
+<div class="user">
+  <div>
+
+    <%= form_with model: @spending do |form| %>
+    <h1>New Transaction</h1>
+
+    <div><%= form.label :name, :class => "block text-sm text-xl font-semibold text-center" %></div>
+    <div><%= form.text_field :name, :class => "w-full py-1 bg-softgray rounded-lg placeholder-midgray text-midgray text-center", :placeholder => "Transaction Name" %></div>
+    <div><%= form.label :amount, :class => "block text-sm text-xl font-semibold text-center" %></div>
+    <div><%= form.number_field :amount, step: 0.01, class: 'input w-full py-1 bg-softgray rounded-lg placeholder-midgray text-midgray text-center', :placeholder => "Amount" %></div>
+    <div><%= form.label :group_id, :class => "block text-sm text-xl font-semibold text-center" %></div>
+    <div>
+      <%= form.collection_select :group_id, current_user.groups.external+Group.all.with_group, :id, :name, {:prompt => 'Select one group' } %>
+    </div>
+    <div><%= form.submit 'Create Spending', :class => 'text-white bg-softgreen hover:bg-green rounded-lg py-1 px-3' %></div>
+  
+    <% end %>
+  </div>
+</div>

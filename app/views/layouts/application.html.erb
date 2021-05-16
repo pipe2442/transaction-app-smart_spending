@@ -1,16 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>SmartSpending</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>TransactionGroup</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-    <%= yield %>
-  </body>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+
+
+
+
+  <div class="header header-fixed">
+    <div class="navbar container">
+      <input type="checkbox" id="navbar-toggle">
+      <label for="navbar-toggle"><i></i></label>
+      <nav class="menu">
+        <% if current_user %>
+        <ul>
+          <li><a href="#home"><%= link_to "Log Out", logout_path%></a></li>
+          <li><%= link_to "Home", root_path%></li>
+          <li><%= link_to "Spendings", spendings_path%></li>
+          <li><%= link_to "External", external_path%></li>
+          <li><%= link_to "Groups", groups_path%></li>
+        </ul>
+        <% else %>
+        <ul>
+          <li><%= link_to "Log In", login_path%></li>
+          <li>
+            <div><%= link_to "Sign Up", signup_path%></div>
+          </li>
+          <li><%= link_to "Home", root_path%></li>
+        </ul>
+        <% end %>
+      </nav>
+    </div>
+  </div>
+
+
+
+  <%= yield %>
+
+
+</body>
+
 </html>

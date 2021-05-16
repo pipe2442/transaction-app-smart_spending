@@ -1,0 +1,14 @@
+<section class="bg-softgray py-10">
+    <div class="leading-loose flex justify-center my-10">
+        <div class="bg-white p-20 rounded-lg">
+            <%= form_for @user do |form| %>
+            <div class="user">
+                <h2>Update Profile Pic</h2>
+                <%= form.label :avatar %>
+                <%= form.file_field :avatar, :placeholder => "avatar" %>
+                <%= form.submit 'update avatar' %>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</section>

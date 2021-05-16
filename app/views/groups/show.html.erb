@@ -1,0 +1,18 @@
+<section class="bg-softgray py-5">
+    <div class="user">
+        <%= show_icon(@group) %>      
+        <h1>Check <%= @group.name %> Group</h1>
+        <p>In this section you can check a single group with his transactions.</p>
+    </div>
+    <%= show_group(@group) %>
+    <div class="group">
+        <div>
+            <h2>Group Owner:</h2>
+            <h3><%= @group.user.name %></h3>
+        </div>
+        <div>
+            <h2>The total amount is:</h2>
+            <h3><%= grouptotal(@group) %></h3>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,14 @@
+<section class="bg-softgray py-10">
+    <div class="leading-loose flex justify-center my-10">
+        <div class="bg-white p-20 rounded-lg">
+            <%= form_for @group do |form| %>
+            <div class="user">
+                <h2>Update Icon Pic</h2>
+                <%= form.label :icon %>
+                <%= form.file_field :icon, :placeholder => "avatar" %>
+                <%= form.submit 'update icon' %>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</section>

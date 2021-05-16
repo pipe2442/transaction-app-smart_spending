@@ -1,1 +1,8 @@
-<h1>hola mundo</h1>
+<section>
+    <div class="user">
+        <h1>Check Groups</h1>
+        <p>In this section you can create new groups.</p>
+    </div>
+    <%= render partial: "form" %>
+    <%= display_groups(@groups.with_group.sort { |a, b| a.name <=> b.name }) %>
+</section>
